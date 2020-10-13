@@ -17,9 +17,11 @@ from django.contrib import admin
 from django.urls import path
 from  django.conf.urls import url
 from apptwo import views
+from django.conf.urls import include
 
 
 urlpatterns = [
     url(r'^$',views.index,name='index'),
+    url(r'^help/',include('apptwo.urls')),
     path('admin/', admin.site.urls),
 ]

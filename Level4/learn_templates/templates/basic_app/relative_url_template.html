@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>WELCOME TO RELATIVE_URL_TEMPLATE</h1>
+
+      <!-- THE OLD METHOD
+      <a href="basic_app/other.html">THIS IS OTHER PAGE</a> -->
+
+    <!-- THE NEW WAY -->
+    <a href="{%  url 'basic_app:other' %}">THE OTHER PAGE</a>
+
+    <a href="{% url 'admin:index' %}">LINK TO ADMIN</a>
+    <a href="{% url 'index' %}">LINK TO INDEX</a>
+
+  </body>
+</html>

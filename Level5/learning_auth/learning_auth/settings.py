@@ -77,10 +77,19 @@ WSGI_APPLICATION = 'learning_auth.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'djongo',
+        'NAME': 'mylogin',
+        'CLIENT': {
+           'host': 'localhost:27017',
+        }
     }
 }
 
@@ -135,3 +144,6 @@ STATICFILES_DIRS=[STATIC_DIR,]
 # MEDIA_DIR
 MEDIA_ROOT=MEDIA_DIR
 MEDIA_URL='/media/'
+
+
+LOGIN_URL='/basic_app/user_login'
